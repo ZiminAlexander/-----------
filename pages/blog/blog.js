@@ -25,7 +25,22 @@ ch1Btn.addEventListener('click', function(){
     templateImg.querySelector('img').classList.add('image-for-edit');
     mainChapter.appendChild(templateImg);
 
-    //Счётчик фильтров
+    let downloadButton = document.querySelector(".download-button");
+    
+    downloadButton.addEventListener('change', function(){
+        
+        let newFileName = document.querySelector("input[type=file]").files[0];
+        let urlImageNew = new FileReader();
+        let imageForEdit = document.querySelector("img");
+            
+        urlImageNew.addEventListener("load", () => {
+                imageForEdit.src = urlImageNew.result;
+            }, false);
+        if (newFileName) {
+            urlImageNew.readAsDataURL(newFileName);
+        }
+            
+    });
 
     let addFilterButton = mainChapter.querySelector(".add-philter");
     addFilterButton.addEventListener('click', function(){
@@ -33,10 +48,12 @@ ch1Btn.addEventListener('click', function(){
         mainChapter.appendChild(templateFilterString.cloneNode(true));
         setEventListeners();
         setcounter();
+    
+
+    });
+});
 
 
-    })
-})
 
 let setEventListeners = function (){
     let allFilters = document.querySelectorAll(".filterString");

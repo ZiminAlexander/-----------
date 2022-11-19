@@ -56,12 +56,13 @@
     <script src="pages/blog/blog.js"></script>
     <template id="edit-photo-template">
         <div class="buttons" style="margin: 15px; display: flex; justify-content: space-around; width: 400px; " >
-            <button type="button" class="download-button"> Загрузить <br> фотографию </button>
+            <input type="button" id="loadFileXml" value="Загрузить фотографию" onclick="document.getElementById('file').click();" />
+            <input type="file" class="download-button" style="display: none;" id="file" name="file" accept="image/png, image/gif, image/jpeg, image/jpg"/>
             <button type="button" class="save-photo" disabled="true"> Сохранить <br> фотографию </button>
             <button type="button" class="add-philter"> Добавить <br> фильтр </button>
         </div>
         <img src = "images/chapter1.JPG"
-        alt = "Фотография для редактирования" style="width: 400px; margin: 15px; margin-top: 0px; filter:sepia(0.8)"><br>
+        alt = "Фотография для редактирования" style="width: 400px; margin: 15px; margin-top: 0px;"><br>
         
     </template>
     <template id="filter-string-template">
