@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Проекты, резюме, блог">
+    <meta name="description" content="Пробный сборник проектов">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainStyle.css">
+    <link rel="stylesheet" href="headerAndFooterStyle.css">
+    <title> Мои проекты </title>
+</head>
+<body>
+    <header>
+        <div class="title-header">Главная страница</div>
+    </header>
+    
+    <section class="carousel">
+        <h1> Выбор раздела</h1>
+        <button class="arrow arrow-back" type="button">
+            <span class="visually-hidden">Назад</span>
+        </button>
+
+        <ul class="chapter-list">
+            <li class="chapter button" type="button">
+                <h2 class="title-chapter"> Блог на JavaScript </h2>
+                <img class="image" src="images/chapter1.JPG" alt="Раздел1">
+                <p class="description"> Страница для ведения блога,
+                    написанная на чистом JavaScript. </p>
+            </li>
+            <li class="chapter">
+                <a href="pages/rezume/rezume.html">
+                <h2 class="title-chapter"> Резюме </h2>
+                <img class="image" src="images/chapter2.JPG" alt="Резюме">
+                <p class="description"> Коротко расскажу о себе. Образование, опыт работы, навыки. </p>
+                </a>
+            </li>
+            <li class="chapter">
+                <h2 class="title-chapter"> Раздел3 </h2>
+                <img class="image" src="images/chapter3.JPG" alt="Раздел3">
+                <p class="description"> Это раздел №3 </p>
+            </li>
+
+        </ul>
+
+        <button class="arrow arrow-next" type="button">
+            <span class="visually-hidden">Вперед</span>
+        </button>
+    </section>
+    <footer>
+        <div class="author">Зимин Александр Сергеевич</div>
+        <div class="mail">ZiminAls@inbox.ru</div>
+        <div class="phone">8 (910) 471-89-78</div>
+    </footer>
+    <script src="mainScript.js"></script>
+    <script src="pages/blog/blog.js"></script>
+    <template id="edit-photo-template">
+        <div class="buttons" style="margin: 15px; display: flex; justify-content: space-around; width: 400px; " >
+            <button type="button" class="download-button"> Загрузить <br> фотографию </button>
+            <button type="button" class="save-photo" disabled="true"> Сохранить <br> фотографию </button>
+            <button type="button" class="add-philter"> Добавить <br> фильтр </button>
+        </div>
+        <img src = "images/chapter1.JPG"
+        alt = "Фотография для редактирования" style="width: 400px; margin: 15px; margin-top: 0px; filter:sepia(0.8)"><br>
+        
+    </template>
+    <template id="filter-string-template">
+        <div class="filterString" style="width: 400px; display: flex; justify-content: space-between; margin-left: 15px; margin-bottom: 15px;"">
+            <select name="filterName">
+                <option value="opacity" data-values="0,1,1,">Прозрачность</option>
+                <option value="contrast" data-values="0,1,1,">Контраст</option>
+                <option value="brightness" data-values="0,1,1,">Яркость</option>
+                <option value="saturate" data-values="0,1,1,">Насыщенность</option>
+                <option value="invert" data-values="0,1,0,">Инверсия</option>
+                <option value="blur" data-values="0,200,1,px">Размытие</option>
+                <option value="grayscale" data-values="0,1,0,">Серость</option>
+                <option value="hue-rotate" data-values="0,360,0,deg">Поворот цвета</option>
+                <option value="sepia" data-values="0,1,0,">Сепиа</option>
+            </select>
+            <input name="filterValue" type="range" min="0" max="1" step="0.1" value="1">
+            <div class="filterValueNumber" style="transform: translateY(5px);"> 1 </div>
+            <button type = "button" class = "delete-button"> Удалить <br> фильтр </button>
+        </div>
+    </template>
+</body>
+</html>
