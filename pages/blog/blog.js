@@ -108,6 +108,7 @@ let setLimitsAndFilters = function(){
 
 }
 
+
 let deleteFilter = function(){
     let allFilters = document.querySelectorAll(".filterString");
     if (allFilters.length === 0) {return;}
