@@ -123,7 +123,3 @@ let setcounter = function(){
         currentFilterString.dataset.counter = i + 1;
     }
 }
-
-let helloWorld = function (){
-    console.log("Hello, World!");
-}
