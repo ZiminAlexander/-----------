@@ -53,8 +53,6 @@ ch1Btn.addEventListener('click', function(){
     });
 });
 
-
-
 let setEventListeners = function (){
     let allFilters = document.querySelectorAll(".filterString");
     if (allFilters.length === 0) {return;}
@@ -107,7 +105,6 @@ let setLimitsAndFilters = function(){
     setFilters();
 
 }
-
 
 let deleteFilter = function(){
     let allFilters = document.querySelectorAll(".filterString");
